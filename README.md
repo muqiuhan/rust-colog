@@ -27,7 +27,7 @@ fn main()
 
 This results in the following terminal output:
 
-![demo screenshot from terminal](https://raw.githubusercontent.com/chrivers/rust-colog/master/screenshot.png)
+![demo screenshot from terminal](./screenshot.png)
 
 ## Known issues and improvements ##
 
