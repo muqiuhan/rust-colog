@@ -5,6 +5,8 @@ use std::env;
 mod color;
 mod format;
 
+pub use log;
+
 pub fn builder() -> Builder {
     let mut builder = Builder::new();
     builder.format(format::format);
