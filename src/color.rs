@@ -7,7 +7,7 @@ pub fn level_color(level: &log::Level, msg: &str) -> String {
         Level::Error => msg.red().blink(),
         Level::Warn => msg.yellow().blink(),
         Level::Info => msg.green(),
-        Level::Debug => msg.green(),
+        Level::Debug => msg.blue(),
         Level::Trace => msg.magenta(),
     }
     .bold()
