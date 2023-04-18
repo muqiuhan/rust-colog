@@ -2,8 +2,7 @@
 extern crate log;
 use colog;
 
-fn main()
-{
+fn main() {
     colog::init();
     error!("error message");
     error!("error with fmt: {}", 42);

@@ -2,8 +2,7 @@
 extern crate log;
 use colog;
 
-fn main()
-{
+fn main() {
     let mut clog = colog::builder();
     clog.filter(None, log::LevelFilter::Warn);
     clog.init();
