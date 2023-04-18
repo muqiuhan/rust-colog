@@ -29,13 +29,12 @@ fn prefix_token(level: &Level) -> String {
 pub fn format(buf: &mut Formatter, record: &Record<'_>) -> Result<(), Error> {
     let now = Local::now();
     let date_str = format!(
-        "{}.{}.{} {}:{}:{}:{:03}",
+        "{}.{}.{:02} {}:{}:{:03}",
         now.day(),
         now.month(),
         now.year(),
         now.hour(),
         now.minute(),
-        now.second(),
         now.timestamp_subsec_micros() / 1000
     );
 
@@ -44,7 +43,7 @@ pub fn format(buf: &mut Formatter, record: &Record<'_>) -> Result<(), Error> {
     writeln!(
         buf,
         "{} {} {}",
-        date_str.white(),
+        date_str.cyan(),
         prefix_token(&record.level()),
         format!("{}", record.args()).replace("\n", &sep),
     )
